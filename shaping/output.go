@@ -3,8 +3,8 @@
 package shaping
 
 import (
-	"github.com/go-text/typesetting/di"
-	"github.com/go-text/typesetting/font"
+	"github.com/nanorele/typesetting/di"
+	"github.com/nanorele/typesetting/font"
 	"golang.org/x/image/math/fixed"
 )
 

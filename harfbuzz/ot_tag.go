@@ -4,9 +4,9 @@ import (
 	"encoding/hex"
 	"strings"
 
-	ot "github.com/go-text/typesetting/font/opentype"
-	"github.com/go-text/typesetting/font/opentype/tables"
-	"github.com/go-text/typesetting/language"
+	ot "github.com/nanorele/typesetting/font/opentype"
+	"github.com/nanorele/typesetting/font/opentype/tables"
+	"github.com/nanorele/typesetting/language"
 )
 
 // ported from harfbuzz/src/hb-ot-tag.cc Copyright © 2009  Red Hat, Inc. 2011  Google, Inc. Behdad Esfahbod, Roozbeh Pournader

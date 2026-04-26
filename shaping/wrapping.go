@@ -4,8 +4,8 @@ import (
 	"math"
 	"sort"
 
-	"github.com/go-text/typesetting/di"
-	"github.com/go-text/typesetting/segmenter"
+	"github.com/nanorele/typesetting/di"
+	"github.com/nanorele/typesetting/segmenter"
 	"golang.org/x/image/math/fixed"
 )
 
@@ -617,10 +617,19 @@ type wrapBuffer struct {
 }
 
 func (w *wrapBuffer) reset() {
+	// Zero out entries before shrinking so that any Output values from
+	// the previous wrap (which hold potentially large []Glyph slice
+	// headers) stop being reachable via this buffer.
+	for i := range w.paragraph {
+		w.paragraph[i] = nil
+	}
 	if cap(w.paragraph) < 10 {
 		w.paragraph = make([]Line, 0, 10)
 	}
 	w.paragraph = w.paragraph[:0]
+	for i := range w.alt {
+		w.alt[i] = Output{}
+	}
 	if cap(w.alt) < 10 {
 		w.alt = make([]Output, 0, 10)
 	}
@@ -628,6 +637,10 @@ func (w *wrapBuffer) reset() {
 	w.altAdvance = 0
 	w.altSave = w.alt[:0]
 	w.altAdvanceSave = 0
+	fullLine := w.line[:cap(w.line)]
+	for i := range fullLine {
+		fullLine[i] = Output{}
+	}
 	if cap(w.line) < 100 {
 		w.line = make([]Output, 0, 100)
 	}
@@ -641,6 +654,14 @@ func (w *wrapBuffer) reset() {
 		// the capacity.
 		w.line = append(w.line[:cap(w.line)], Output{})[:0]
 	}
+}
+
+// ResetBuffers drops internal references to shaped outputs from the most
+// recent wrap, allowing their glyph data to be reclaimed even before the
+// next wrap. After calling this, any [Line] slices previously returned by
+// the wrapper become invalid.
+func (l *LineWrapper) ResetBuffers() {
+	l.scratch.reset()
 }
 
 // singleRunParagraph is an optimized helper for quickly constructing

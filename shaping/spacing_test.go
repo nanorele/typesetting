@@ -3,10 +3,10 @@ package shaping
 import (
 	"testing"
 
-	"github.com/go-text/typesetting/di"
-	"github.com/go-text/typesetting/font"
-	"github.com/go-text/typesetting/language"
-	tu "github.com/go-text/typesetting/testutils"
+	"github.com/nanorele/typesetting/di"
+	"github.com/nanorele/typesetting/font"
+	"github.com/nanorele/typesetting/language"
+	tu "github.com/nanorele/typesetting/testutils"
 	"golang.org/x/image/math/fixed"
 )
 

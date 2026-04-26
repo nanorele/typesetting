@@ -3,8 +3,8 @@ package fontscan
 import (
 	"hash/maphash"
 
-	"github.com/go-text/typesetting/font"
-	"github.com/go-text/typesetting/language"
+	"github.com/nanorele/typesetting/font"
+	"github.com/nanorele/typesetting/language"
 )
 
 // runeLRUEntry holds a single key-value pair for an LRU cache.

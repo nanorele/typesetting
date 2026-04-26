@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"io"
 
-	ot "github.com/go-text/typesetting/font/opentype"
-	"github.com/go-text/typesetting/font/opentype/tables"
+	ot "github.com/nanorele/typesetting/font/opentype"
+	"github.com/nanorele/typesetting/font/opentype/tables"
 )
 
 var (

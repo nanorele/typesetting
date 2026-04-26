@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-text/typesetting/font"
-	ot "github.com/go-text/typesetting/font/opentype"
-	"github.com/go-text/typesetting/language"
-	"github.com/go-text/typesetting/shaping"
-	tu "github.com/go-text/typesetting/testutils"
+	"github.com/nanorele/typesetting/font"
+	ot "github.com/nanorele/typesetting/font/opentype"
+	"github.com/nanorele/typesetting/language"
+	"github.com/nanorele/typesetting/shaping"
+	tu "github.com/nanorele/typesetting/testutils"
 )
 
 func ExampleFontMap_UseSystemFonts() {
@@ -382,7 +382,7 @@ func TestDumpSystemFonts(t *testing.T) {
 	}
 	code := fmt.Sprintf(`
 	package fontscan
-	import "github.com/go-text/typesetting/font"
+	import "github.com/nanorele/typesetting/font"
 
 	// extracted from a linux system
 	var linuxSampleFontSet = 

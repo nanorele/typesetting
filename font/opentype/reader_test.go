@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	td "github.com/go-text/typesetting-utils/opentype"
-	tu "github.com/go-text/typesetting/testutils"
+	tu "github.com/nanorele/typesetting/testutils"
 )
 
 func TestParseCrashers(t *testing.T) {

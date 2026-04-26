@@ -3,10 +3,10 @@
 package shaping
 
 import (
-	"github.com/go-text/typesetting/di"
-	ft "github.com/go-text/typesetting/font"
-	"github.com/go-text/typesetting/harfbuzz"
-	ucd "github.com/go-text/typesetting/internal/unicodedata"
+	"github.com/nanorele/typesetting/di"
+	ft "github.com/nanorele/typesetting/font"
+	"github.com/nanorele/typesetting/harfbuzz"
+	ucd "github.com/nanorele/typesetting/internal/unicodedata"
 	"golang.org/x/image/math/fixed"
 )
 
@@ -170,6 +170,15 @@ func (t *HarfbuzzShaper) Shape(input Input) Output {
 	out.RecalculateAll()
 
 	replaceNotSupportedSpaces(input.Text, out.Glyphs)
+
+	// If this shape produced a large internal buffer (e.g. a multi-MB
+	// paragraph), drop it so the backing arrays can be reclaimed by the
+	// GC instead of lingering for the lifetime of the shaper. Next Shape
+	// call will re-allocate — cheap for typical sizes.
+	const largeBufferThreshold = 64 * 1024
+	if cap(t.buf.Info) > largeBufferThreshold {
+		t.buf.Release()
+	}
 
 	return out
 }

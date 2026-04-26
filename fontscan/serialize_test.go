@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-text/typesetting/font"
-	"github.com/go-text/typesetting/language"
+	"github.com/nanorele/typesetting/font"
+	"github.com/nanorele/typesetting/language"
 )
 
 func Test_serializeFootprints(t *testing.T) {

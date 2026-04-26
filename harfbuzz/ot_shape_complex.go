@@ -1,10 +1,10 @@
 package harfbuzz
 
 import (
-	ot "github.com/go-text/typesetting/font/opentype"
-	"github.com/go-text/typesetting/font/opentype/tables"
-	ucd "github.com/go-text/typesetting/internal/unicodedata"
-	"github.com/go-text/typesetting/language"
+	ot "github.com/nanorele/typesetting/font/opentype"
+	"github.com/nanorele/typesetting/font/opentype/tables"
+	ucd "github.com/nanorele/typesetting/internal/unicodedata"
+	"github.com/nanorele/typesetting/language"
 )
 
 type zeroWidthMarks uint8

@@ -9,9 +9,9 @@ import (
 	"testing"
 
 	td "github.com/go-text/typesetting-utils/harfbuzz"
-	"github.com/go-text/typesetting/font"
-	ot "github.com/go-text/typesetting/font/opentype"
-	tu "github.com/go-text/typesetting/testutils"
+	"github.com/nanorele/typesetting/font"
+	ot "github.com/nanorele/typesetting/font/opentype"
+	tu "github.com/nanorele/typesetting/testutils"
 )
 
 // This is the main test suite for harfbuzz, which parses and runs

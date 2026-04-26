@@ -9,8 +9,8 @@ import (
 	"errors"
 	"fmt"
 
-	ps "github.com/go-text/typesetting/font/cff/interpreter"
-	"github.com/go-text/typesetting/font/opentype"
+	ps "github.com/nanorele/typesetting/font/cff/interpreter"
+	"github.com/nanorele/typesetting/font/opentype"
 )
 
 var errUnsupportedCFFVersion = errors.New("unsupported CFF version")

@@ -2,7 +2,7 @@
 
 package font
 
-import "github.com/go-text/typesetting/font/opentype/tables"
+import "github.com/nanorele/typesetting/font/opentype/tables"
 
 type Morx []MorxChain
 

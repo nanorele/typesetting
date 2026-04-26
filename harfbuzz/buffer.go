@@ -1,8 +1,8 @@
 package harfbuzz
 
 import (
-	"github.com/go-text/typesetting/font/opentype/tables"
-	"github.com/go-text/typesetting/language"
+	"github.com/nanorele/typesetting/font/opentype/tables"
+	"github.com/nanorele/typesetting/language"
 )
 
 /* ported from harfbuzz/src/hb-buffer.hh and hb-buffer.h
@@ -242,6 +242,16 @@ func (b *Buffer) Clear() {
 	b.clearContext(1)
 
 	b.serial = 0
+}
+
+// Release drops the backing arrays used during shaping so they can be
+// reclaimed by the GC. Useful after shaping a very large paragraph when
+// subsequent shapes are likely to be much smaller. Next [Buffer.AddRunes]
+// will re-allocate transparently.
+func (b *Buffer) Release() {
+	b.Info = nil
+	b.outInfo = nil
+	b.Pos = nil
 }
 
 // cur returns the glyph at the cursor, optionaly shifted by `i`.

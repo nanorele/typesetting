@@ -3,7 +3,7 @@ package tables
 import (
 	"testing"
 
-	tu "github.com/go-text/typesetting/testutils"
+	tu "github.com/nanorele/typesetting/testutils"
 )
 
 func TestCOLR(t *testing.T) {
