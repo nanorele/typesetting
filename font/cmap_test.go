@@ -12,7 +12,7 @@ import (
 	"github.com/nanorele/typesetting/font/opentype/tables"
 	tu "github.com/nanorele/typesetting/testutils"
 
-	td "github.com/go-text/typesetting-utils/opentype"
+	td "github.com/nanorele/typesetting-utils/opentype"
 )
 
 // check for crashes, return the number of glyphs

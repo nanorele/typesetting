@@ -7,7 +7,7 @@ import (
 	"path"
 	"testing"
 
-	"github.com/go-text/typesetting-utils/opentype"
+	"github.com/nanorele/typesetting-utils/opentype"
 )
 
 func Assert(t testing.TB, b bool) {

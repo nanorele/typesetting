@@ -1,8 +1,8 @@
 module github.com/nanorele/typesetting
 
-go 1.19
+go 1.25.5
 
 require (
-	github.com/go-text/typesetting-utils v0.0.0-20260419141703-4ffe8874dabc
+	github.com/nanorele/typesetting-utils v1.0.0
 	golang.org/x/image v0.23.0
 )

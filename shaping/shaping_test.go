@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"testing"
 
-	hd "github.com/go-text/typesetting-utils/harfbuzz"
-	td "github.com/go-text/typesetting-utils/opentype"
+	hd "github.com/nanorele/typesetting-utils/harfbuzz"
+	td "github.com/nanorele/typesetting-utils/opentype"
 	"github.com/nanorele/typesetting/di"
 	"github.com/nanorele/typesetting/font"
 	ot "github.com/nanorele/typesetting/font/opentype"

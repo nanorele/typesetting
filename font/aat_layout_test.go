@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	td "github.com/go-text/typesetting-utils/opentype"
+	td "github.com/nanorele/typesetting-utils/opentype"
 	"github.com/nanorele/typesetting/font/opentype/tables"
 	tu "github.com/nanorele/typesetting/testutils"
 )

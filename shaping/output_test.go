@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	hd "github.com/go-text/typesetting-utils/harfbuzz"
+	hd "github.com/nanorele/typesetting-utils/harfbuzz"
 	"github.com/nanorele/typesetting/di"
 	"github.com/nanorele/typesetting/font"
 	"github.com/nanorele/typesetting/language"

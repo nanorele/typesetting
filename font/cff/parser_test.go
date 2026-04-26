@@ -8,7 +8,7 @@ import (
 	"reflect"
 	"testing"
 
-	td "github.com/go-text/typesetting-utils/opentype"
+	td "github.com/nanorele/typesetting-utils/opentype"
 	psinterpreter "github.com/nanorele/typesetting/font/cff/interpreter"
 	ot "github.com/nanorele/typesetting/font/opentype"
 	"github.com/nanorele/typesetting/font/opentype/tables"

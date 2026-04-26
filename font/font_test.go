@@ -6,8 +6,8 @@ import (
 	"bytes"
 	"testing"
 
-	hb "github.com/go-text/typesetting-utils/harfbuzz"
-	td "github.com/go-text/typesetting-utils/opentype"
+	hb "github.com/nanorele/typesetting-utils/harfbuzz"
+	td "github.com/nanorele/typesetting-utils/opentype"
 	ot "github.com/nanorele/typesetting/font/opentype"
 	"github.com/nanorele/typesetting/font/opentype/tables"
 	tu "github.com/nanorele/typesetting/testutils"

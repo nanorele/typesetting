@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	td "github.com/go-text/typesetting-utils/opentype"
+	td "github.com/nanorele/typesetting-utils/opentype"
 	tu "github.com/nanorele/typesetting/testutils"
 )
 

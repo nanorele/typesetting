@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	td "github.com/go-text/typesetting-utils/harfbuzz"
+	td "github.com/nanorele/typesetting-utils/harfbuzz"
 	"github.com/nanorele/typesetting/font"
 	ot "github.com/nanorele/typesetting/font/opentype"
 	tu "github.com/nanorele/typesetting/testutils"

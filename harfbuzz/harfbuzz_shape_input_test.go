@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	td "github.com/go-text/typesetting-utils/harfbuzz"
+	td "github.com/nanorele/typesetting-utils/harfbuzz"
 	"github.com/nanorele/typesetting/font"
 	"github.com/nanorele/typesetting/language"
 	tu "github.com/nanorele/typesetting/testutils"
